@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Shoe Store</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="empty_field">Please fill all fields</string>
+    <string name="logout">Logout</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign up</string>
+    <string name="welcome_title">Welcome</string>
+    <string name="welcome_text_title">This is the Shoe Store, Enjoy!</string>
+    <string name="welcome_text_desc">Enter to Shoe Store and add your Shoe</string>
+    <string name="instructions">Instructions</string>
+    <string name="instructions_text_1">Go to next screen and start to add shoe.</string>
+    <string name="instructions_text_2">Start Now</string>
+    <string name="shoe_detail">Shoe Detail</string>
+    <string name="shoe_detail_company">Company</string>
+    <string name="shoe_detail_size">Shoe size</string>
+    <string name="shoe_detail_description">Description</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="empty_fields_warning">Please fill all fields</string>
+    <string name="hint_email">goerg@gmail.com</string>
+    <string name="hint_pass">123456</string>
+    <string name="shoe_list">Shoe List</string>
+    <string name="empty_list">the shoe list is empty!</string>
+    <string name="shoe_name">Shoe name</string>
+    <string name="shoe_company">Company</string>
+    <string name="shoe_size">Shoe size</string>
+    <string name="shoe_description">Description</string>
+    <string name="log_in_button">Log In</string>
+    <string name="register_button">Register</string>
+    <string name="instructions_screen">instructions screen</string>
+    <string name="how_to_use_shoe_store">How to use shoe store</string>
+    <string name="instruction">Open shoe list and modify new product</string>
+    <string name="button_shoe_store_list">shoe store list</string>
+</resources>

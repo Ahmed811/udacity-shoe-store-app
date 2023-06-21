@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.udacity.shoestore.viewmodels.ShoesViewModel" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <!-- The entire layout is wrapped in a ConstraintLayout for better flexibility and support for
+         different screen sizes and orientations. -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent">
+        <!-- The ScrollView is used to enable scrolling of the LinearLayout containing the shoe items. -->
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toTopOf="@id/fab"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <!-- The LinearLayout is used to organize the shoe items vertically. -->
+
+            <LinearLayout
+                android:id="@+id/shoe_list_linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/empty_list_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/empty_field"
+                    android:textAlignment="center"
+                    android:visibility="@{viewModel.shoesEmpty() ? View.VISIBLE : View.GONE}" />
+            </LinearLayout>
+
+
+        </ScrollView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_margin="@dimen/fragment_horizontal_margin"
+            android:background="@color/colorPrimaryDark"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:src="@drawable/ic_add"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- The FloatingActionButton is positioned at the bottom right of the screen and
+               overlaps the ScrollView. -->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

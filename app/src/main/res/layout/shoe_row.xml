@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+
+        <variable
+            name="shoe"
+            type="com.udacity.shoestore.models.Shoe" />
+    </data>
+    <!-- This layout uses ConstraintLayout to achieve a more flexible and efficient UI design -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/shoe_padding">
+        <!-- The following TextView is positioned at the top-center of the screen using ConstraintLayout -->
+
+        <TextView
+            android:id="@+id/shoe_name"
+            style="@style/ShoeNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@{shoe.name}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Shoe name" />
+        <!-- The following LinearLayout contains an ImageView and several TextViews, all of which are positioned using ConstraintLayout -->
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fragment_horizontal_margin"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shoe_name">
+
+            <ImageView
+                android:id="@+id/shoe_image"
+                android:layout_width="@dimen/shoe_image_size"
+                android:layout_height="@dimen/shoe_image_size"
+                app:srcCompat="@drawable/shoe" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/fragment_vertical_margin"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/shoe_size"
+                    style="@style/ShoeDescriptionText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{@string/shoe_size(shoe.size)}"
+                    tools:text="Size: 42" />
+
+                <TextView
+                    android:id="@+id/shoe_company"
+                    style="@style/ShoeDescriptionText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{@string/shoe_company(shoe.company)}"
+                    tools:text="Company: Mike" />
+
+                <TextView
+                    android:id="@+id/shoe_description"
+                    style="@style/ShoeDescriptionText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{@string/shoe_description(shoe.description)}"
+                    tools:text="Description: text" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <!-- The following View is a simple divider that spans the width of the screen and is positioned below the above LinearLayout using ConstraintLayout -->
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="@dimen/shoe_divider_width"
+            android:layout_height="1dp"
+            android:background="@color/shoeGreen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

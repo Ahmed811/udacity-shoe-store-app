@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <!-- This layout uses a LinearLayout to stack views vertically. -->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".screens.WelcomeFragment">
+
+
+        <!-- This TextView displays the app's title text and uses match_parent for its width and wrap_content for its height. -->
+        <TextView
+            android:id="@+id/app_title_text"
+            style="@style/TitleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:gravity="center_horizontal"
+            android:text="@string/how_to_use_shoe_store" />
+
+        <!-- This TextView displays the welcome text and uses match_parent for its width and wrap_content for its height. -->
+        <TextView
+            android:id="@+id/welcome_text"
+            style="@style/ShoeNameText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:gravity="center"
+            android:text="@string/instruction" />
+
+        <!-- This Button uses wrap_content for both its width and height and has a custom style applied to it. -->
+        <Button
+            android:id="@+id/instructions_button"
+            style="@style/MyButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_shoe_store_list" />
+    </LinearLayout>
+</layout>
